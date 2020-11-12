@@ -1,0 +1,406 @@
+/*
+ * MIT License
+ * Copyright(c) 2020 @dage459
+ *    http://www.opensource.org/licenses/mit-license.php
+ */
+
+/*
+ * --------------------------------------------------------------------------------
+ * Description:
+ *        ToDo:
+ * --------------------------------------------------------------------------------
+ */
+
+:root {
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+}
+
+/*  */
+.xl {
+  width: 100px;
+  height: 100px;
+}
+
+.lg {
+  width: 75px;
+  height: 75px;
+}
+
+.md {
+  width: 50px;
+  height: 50px;
+}
+
+.sm {
+  width: 25px;
+  height: 25px;
+}
+
+/* spinner */
+.spinner {
+  position: relative;
+}
+
+.spinner div {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 8px solid transparent;
+  border-radius: 50%;
+}
+
+.spinner div:nth-child(2) {
+  border: 8px solid transparent;
+}
+
+.spinner.xl div,
+.spinner.xl div:nth-child(2) {
+  animation: spinnerOneXl 1.2s linear infinite;
+  animation: spinnerTwoXl 1.2s linear infinite;
+}
+
+.spinner.lg div,
+.spinner.lg div:nth-child(2) {
+  animation: spinnerOneLg 1.2s linear infinite;
+  animation: spinnerTwoLg 1.2s linear infinite;
+}
+
+.spinner.md div,
+.spinner.md div:nth-child(2) {
+  animation: spinnerOneMd 1.2s linear infinite;
+  animation: spinnerTwoMd 1.2s linear infinite;
+}
+
+.spinner.sm div,
+.spinner.sm div:nth-child(2) {
+  animation: spinnerOneSm 1.2s linear infinite;
+  animation: spinnerTwoSm 1.2s linear infinite;
+}
+
+.spinner.primary div,
+.spinner.primary div:nth-child(2) {
+  border-top-color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.spinner.secondary div,
+.spinner.secondary div:nth-child(2) {
+  border-top-color: var(--secondary);
+  border-bottom-color: var(--secondary);
+}
+
+.spinner.success div,
+.spinner.success div:nth-child(2) {
+  border-top-color: var(--success);
+  border-bottom-color: var(--success);
+}
+
+.spinner.info div,
+.spinner.info div:nth-child(2) {
+  border-top-color: var(--info);
+  border-bottom-color: var(--info);
+}
+
+.spinner.warning div,
+.spinner.warning div:nth-child(2) {
+  border-top-color: var(--warning);
+  border-bottom-color: var(--warning);
+}
+
+.spinner.danger div,
+.spinner.danger div:nth-child(2) {
+  border-top-color: var(--danger);
+  border-bottom-color: var(--danger);
+}
+
+.spinner.light div,
+.spinner.light div:nth-child(2) {
+  border-top-color: var(--light);
+  border-bottom-color: var(--light);
+}
+
+.spinner.dark div,
+.spinner.dark div:nth-child(2) {
+  border-top-color: var(--dark);
+  border-bottom-color: var(--dark);
+}
+
+@keyframes spinnerOneXl {
+  0% {
+    transform: rotate(0deg);
+    border-width: 10px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 1px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 10px;
+  }
+}
+@keyframes spinnerTwoXl {
+  0% {
+    transform: rotate(0deg);
+    border-width: 1px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 10px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 1px;
+  }
+}
+
+@keyframes spinnerOneLg {
+  0% {
+    transform: rotate(0deg);
+    border-width: 7.5px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 1px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 7.5px;
+  }
+}
+@keyframes spinnerTwoLg {
+  0% {
+    transform: rotate(0deg);
+    border-width: 1px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 7.5px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 1px;
+  }
+}
+
+@keyframes spinnerOneMd {
+  0% {
+    transform: rotate(0deg);
+    border-width: 5px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 1px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 5px;
+  }
+}
+@keyframes spinnerTwoMd {
+  0% {
+    transform: rotate(0deg);
+    border-width: 1px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 5px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 1px;
+  }
+}
+
+@keyframes spinnerOneSm {
+  0% {
+    transform: rotate(0deg);
+    border-width: 2.5px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 1px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 2.5px;
+  }
+}
+@keyframes spinnerTwoSm {
+  0% {
+    transform: rotate(0deg);
+    border-width: 1px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 2.5px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 1px;
+  }
+}
+
+/* bouncing balls */
+.bouncer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.bouncer div {
+  border-radius: 50%;
+  animation: bouncer 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate;
+}
+
+.bouncer.xl div {
+  width: 20px;
+  height: 20px;
+}
+.bouncer.lg div {
+  width: 15px;
+  height: 15px;
+}
+.bouncer.md div {
+  width: 10px;
+  height: 10px;
+}
+.bouncer.sm div {
+  width: 5px;
+  height: 5px;
+}
+
+.bouncer.primary div {
+  background: var(--primary);
+}
+.bouncer.secondary div {
+  background: var(--secondary);
+}
+.bouncer.info div {
+  background: var(--info);
+}
+.bouncer.warning div {
+  background: var(--warning);
+}
+.bouncer.danger div {
+  background: var(--danger);
+}
+.bouncer.light div {
+  background: var(--light);
+}
+
+.bouncer.dark div {
+  border-top-color: var(--dark);
+  border-bottom-color: var(--dark);
+  background: var(--dark);
+}
+
+.bouncer div:nth-child(2) {
+  animation-delay: 0.1s;
+  opacity: 0.8;
+}
+.bouncer div:nth-child(3) {
+  animation-delay: 0.2s;
+  opacity: 0.6;
+}
+.bouncer div:nth-child(4) {
+  animation-delay: 0.3s;
+  opacity: 0.4;
+}
+
+@keyframes bouncer {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
+
+/* flipping squares */
+.square {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  perspective: 200px;
+}
+.square div {
+  position: absolute;
+  top: 0;
+  background: coral;
+  animation: flip 2s linear infinite;
+  transform-origin: right bottom;
+}
+
+.square.xl div {
+  height: 50px;
+  width: 50px;
+}
+.square.lg div {
+  height: 37.5px;
+  width: 37.5px;
+}
+.square.md div {
+  height: 25px;
+  width: 25px;
+}
+.square.sm div {
+  height: 12.5px;
+  width: 12.5px;
+}
+
+.square.primary div {
+  background: var(--primary);
+}
+.square.secondary div {
+  background: var(--secondary);
+}
+.square.success div {
+  background: var(--success);
+}
+.square.info div {
+  background: var(--info);
+}
+.square.warning div {
+  background: var(--warning);
+}
+.square.danger div {
+  background: var(--danger);
+}
+.square.light div {
+  background: var(--light);
+}
+.square.dark div {
+  background: var(--dark);
+}
+
+.square div:nth-child(2) {
+  animation-delay: 1s;
+  opacity: 0.5;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0) rotateY(0);
+  }
+  25% {
+    transform: rotateX(0) rotateY(180deg);
+  }
+  50% {
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+  75% {
+    transform: rotateX(180deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(0) rotateY(0);
+  }
+}
