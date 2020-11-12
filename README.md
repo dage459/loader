@@ -26,7 +26,7 @@ const App = () => {
 export default App;
 ```
 
-### Propertys
+### Properties
 
 > Example use of properties:
 
