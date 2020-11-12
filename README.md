@@ -28,11 +28,27 @@ export default App;
 
 ### Propertys
 
-- if not Propertys are providet it fall back to the defaults.
+> Example use of properties:
+
+```javascript
+import React from "react";
+import Loader from "./loader/Loader";
+
+const App = () => {
+  return (
+    <div>
+      <Loader type="bouncer" size="lg" color="warning" />
+    </div>
+  );
+};
+export default App;
+```
+
+- If not Propertys are providet it fall back to the defaults.
 
 - These are: type=`spinner`, size=`md`, color=`primary`
 
-> The Loader has Different Types in whicht it can be Displayed
+> The Loader can be Displayd in Different Types
 
 | Loader to Display | type    |
 | ----------------- | ------- |
@@ -61,23 +77,6 @@ export default App;
 | Red              | danger    |
 | light Grey       | light     |
 | dark Gray        | dark      |
-
-> Example use of proertys:
-
-```javascript
-import React from "react";
-import Loader from "./loader/Loader";
-
-const App = () => {
-  return (
-    <div>
-      <Loader type="bouncer" size="lg" color="warning" />
-    </div>
-  );
-};
-
-export default App;
-```
 
 ## FAQ
 
